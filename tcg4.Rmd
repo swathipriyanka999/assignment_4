@@ -1,0 +1,16 @@
+```{r}
+
+library(rvest)
+library(dbplyr)
+library(tidyr)
+library(stringr)   
+library(lubridate)
+
+url <- read_html("http://www.leadthecompetition.in/GK/indian-leaders-birth-dates-and-memorials.html")
+
+read1 <- html_table(url)[[1]]
+read <- data.frame(read1)
+read
+
+```
+
